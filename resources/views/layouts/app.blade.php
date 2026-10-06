@@ -9,7 +9,10 @@
 <body class="bg-light">
     <nav class="navbar navbar-dark bg-dark mb-4">
         <div class="container">
-            <a class="navbar-brand" href="{{ route('dashboard') }}">Perpustakaan</a>
+            <div class="d-flex align-items-center gap-3">
+    <a class="navbar-brand" href="{{ route('dashboard') }}">Perpustakaan</a>
+    <a class="nav-link text-white-50" href="{{ route('books.index') }}">Data Buku</a>
+</div>
             <form action="{{ route('logout') }}" method="POST" class="d-flex align-items-center gap-3">
                 @csrf
                 <span class="text-white-50">{{ auth()->user()->name }}</span>
